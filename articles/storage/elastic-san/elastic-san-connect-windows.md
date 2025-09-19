@@ -8,23 +8,65 @@ ms.date: 02/13/2024
 ms.author: rogarana
 ms.custom: references_regions
 ---
-
 # Connect to Elastic SAN volumes - Windows
 
-This article explains how to connect to an Elastic storage area network (SAN) volume from an individual Windows client. For details on connecting from a Linux client, see [Connect to Elastic SAN volumes - Linux](elastic-san-connect-linux.md).
+This article explains how to connect a Windows client to an Azure Elastic SAN volume.
 
-In this article, you add the Storage service endpoint to an Azure virtual network's subnet, then you configure your volume group to allow connections from your subnet. Finally, you configure your client environment to connect to an Elastic SAN volume and establish a connection. For best performance, ensure that your VM and your Elastic SAN are in the same zone.
+There are two connection options:
+
+- **Elastic SAN VM extension** – Use during VM or VM scale set deployment to automatically configure connectivity. This option reduces onboarding steps and is recommended when deploying new VMs at scale.
+- **Manual connect script** – Use after a VM is deployed to configure connectivity with specific parameters. This option provides flexibility for existing VMs and advanced configurations.
+
+Choose the option that best fits your deployment scenario. Both approaches require a deployed Elastic SAN resource and configured volume groups.
+
+## Connect during VM deployment using the Elastic SAN VM extension
+
+You can now connect Elastic SAN volumes to your Windows virtual machines automatically during deployment using the Elastic SAN VM extension. This extension simplifies the setup process by eliminating the need for manual post-deployment configuration. The Elastic SAN VM extension installs and configures itself without requiring manual setup, streamlining deployment workflows. This is especially beneficial for storage-intensive workloads. 
+
+
+### Prerequisites
+
+- An existing Elastic SAN resource with configured volume groups.
+- Permissions to deploy VMs and install extensions in your subscription.
+
+  
+### How to Use the VM Extension
+#### During VM Creation
+
+1. In the Azure portal, navigate to the Extensions tab during VM setup.
+2. Select the Elastic SAN VM extension from the Marketplace.
+3. Provide the required configuration parameters:Elastic SAN name
+- Volume group name
+- Number of sessions
+- Connection mode (e.g., read/write)
+
+#### Post-Deployment Configuration
+
+- Go to the VM’s Extensions + applications blade.
+- Select the Elastic SAN extension and update the settings as needed.
+
+
+### Supported Scenarios
+The extension supports both single VM deployments and VM Scale Sets. For single VMs, it connects Elastic SAN volumes automatically during provisioning. For VM Scale Sets, applying the extension at the scale set level ensures uniform volume connectivity across all instances.
+
+
+
+## Connect to Elastic SAN volumes - Windows
+
+This section explains how to connect to an Elastic storage area network (SAN) volume from an individual Windows client. For details on connecting from a Linux client, see [Connect to Elastic SAN volumes - Linux](elastic-san-connect-linux.md).
+
+In this section, you add the Storage service endpoint to an Azure virtual network's subnet, then you configure your volume group to allow connections from your subnet. Finally, you configure your client environment to connect to an Elastic SAN volume and establish a connection. For best performance, ensure that your VM and your Elastic SAN are in the same zone.
 
 You must use a cluster manager when connecting an individual elastic SAN volume to multiple clients. For details, see [Use clustered applications on Azure Elastic SAN](elastic-san-shared-volumes.md).
 
-## Prerequisites
+### Prerequisites
 
 - Use either the [latest Azure CLI](/cli/azure/install-azure-cli) or install the [latest Azure PowerShell module](/powershell/azure/install-azure-powershell)
 - [Deploy an Elastic SAN](elastic-san-create.md)
 - [Configure a virtual network endpoint](elastic-san-networking.md)
 - [Configure virtual network rules](elastic-san-networking.md#configure-virtual-network-rules)
 
-## Connect to volumes
+### Connect to volumes
 
 ### Set up your client environment
 #### Enable iSCSI Initiator
