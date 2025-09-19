@@ -6,6 +6,7 @@ ms.author: noelleli
 ms.topic: conceptual
 ms.date: 10/03/2024
 ms.subservice: data-flows
+ms.custom: sfi-image-nochange
 ---
 
 # Extract data from PDF
@@ -70,7 +71,7 @@ This template defines five parameters:
 
 10. Enter parameter values, review results, and publish. 
 
-	:::image type="content" source="media/solution-template-extract-data-from-pdf/extract-data-from-pdf-10.png" alt-text="Screesnhot of where to enter pipeline debug parameters on a panel to the right.":::
+	:::image type="content" source="media/solution-template-extract-data-from-pdf/extract-data-from-pdf-10.png" alt-text="Screenshot of where to enter pipeline debug parameters on a panel to the right.":::
 
 	:::image type="content" source="media/solution-template-extract-data-from-pdf/extract-data-from-pdf-11.png" alt-text="Screenshot of the results that return when the pipeline is triggered.":::
 

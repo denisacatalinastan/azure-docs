@@ -8,7 +8,11 @@ ms.subservice: spark
 ms.date: 09/10/2020
 ms.author: jingzh
 zone_pivot_groups: programming-languages-spark-all-minus-sql
-ms.custom: subject-rbac-steps, devx-track-python
+ms.custom:
+  - subject-rbac-steps
+  - devx-track-python
+  - sfi-image-nochange
+  - sfi-ropc-nochange
 ---
 
 # Introduction to Microsoft Spark Utilities
@@ -537,6 +541,11 @@ mssparkutils.fs.append("file path", "content to append", True) # Set the last pa
 ```
 ::: zone-end
 
+> [!NOTE]
+> - ```mssparkutils.fs.append()``` and ```mssparkutils.fs.put()``` do not support concurrent writing to the same file due to lack of atomicity guarantees.
+> - When using the ``` mssparkutils.fs.append ``` API in a ```for``` loop to write to the same file, we recommend to add a ```sleep``` statement around 0.5s~1s between the recurring writes. This is because the ```mssparkutils.fs.append``` API's internal ```flush``` operation is asynchronous, so a short delay helps ensure data integrity.
+
+
 ### Delete file or directory
 
 Removes a file or a directory.
@@ -1036,7 +1045,6 @@ Returns Microsoft Entra token for a given audience, name (optional). The table b
 | Azure Management                                      | `AzureManagement`                     |
 | Azure SQL Data Warehouse (Dedicated and Serverless)   | `DW`                                  |
 | Azure Synapse                                         | `Synapse`                             |
-| Azure Data Lake Store                                 | `DataLakeStore`                       |
 | Azure Data Factory                                    | `ADF`                                 |
 | Azure Data Explorer                                   | `AzureDataExplorer`                   |
 | Azure Database for MySQL                              | `AzureOSSDB`                          |

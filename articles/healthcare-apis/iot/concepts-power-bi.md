@@ -11,6 +11,8 @@ ms.author: chrupa
 
 # MedTech service and Microsoft Power BI
 
+[!INCLUDE [IoT deprecation](../includes/iot-deprecation.md)]
+
 In this article, learn about using the MedTech service and Microsoft Power Business Intelligence (Power BI).
 
 ## The MedTech service and Power BI reference architecture

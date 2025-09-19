@@ -12,9 +12,9 @@ When you migrate your function app, you have the opportunity to choose the targe
 
 | .NET version | [.NET Official Support Policy] release type |  Functions process model<sup>1,2</sup> | 
 | --- | --- | --- |
-| .NET 9 | Preview<sup>3</sup>  | [Isolated worker model] | 
+| .NET 10 | Preview<sup>3</sup> | [Isolated worker model] | 
+| .NET 9 | STS (end of support May 12, 2026)  | [Isolated worker model] | 
 | .NET 8 | LTS (end of support November 10, 2026) | [Isolated worker model],<br/>[In-process model]<sup>2</sup>  | 
-| .NET 6 | LTS (end of support November 12, 2024) |  [Isolated worker model],<br/>[In-process model]<sup>2</sup>  | 
 | .NET Framework 4.8 | [See policy][netfxpolicy] | [Isolated worker model] |  
 
 <sup>1</sup> The [isolated worker model] supports Long Term Support (LTS) and Standard Term Support (STS) versions of .NET, as well as .NET Framework. The [in-process model] only supports LTS releases of .NET, ending with .NET 8. For a full feature and functionality comparison between the two models, see [Differences between in-process and isolate worker process .NET Azure Functions](../articles/azure-functions/dotnet-isolated-in-process-differences.md). 

@@ -2,13 +2,13 @@
 title: Routing preference in Azure
 titleSuffix: Azure Virtual Network
 description: Learn about how you can choose how your traffic routes between Azure and the Internet with routing preference.
-ms.date: 08/24/2023
+ms.date: 12/06/2024
 ms.author: mbender
 author: mbender-ms
 ms.service: azure-virtual-network
 ms.subservice: ip-services
 # Customer intent: As an Azure customer, I want to learn more about routing choices for my internet egress traffic.
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: references_regions
 ---
 
@@ -40,6 +40,10 @@ The new routing choice *Internet routing* minimizes travel on the Microsoft glob
 
 > [!NOTE]
 > Even when using a public IP with routing preference **Internet**, all traffic that is bound for a destination within Azure continues to use the direct path within the Microsoft Wide Area Network.
+>
+
+> [!IMPORTANT]
+> A public IP routing preference can't be changed once created.
 >
 
 ## Supported services
@@ -132,8 +136,5 @@ Internet routing preference is available in all regions listed below:
 
 ## Next steps
 
-* [Learn more about how optimize connectivity to your Microsoft Azure services over the internet - Video](https://www.youtube.com/watch?v=j6A_Mbpuh6s&list=PLLasX02E8BPA5V-waZPcelhg9l3IkeUQo&index=12) 
-
-* [Configure routing preference for a VM using the Azure PowerShell](./configure-routing-preference-virtual-machine-powershell.md)
-
-* [Configure routing preference for a VM using the Azure CLI](./configure-routing-preference-virtual-machine-cli.md)
+> [!div class="nextstepaction"]
+> [Configure routing preference for a virtual machine](./configure-routing-preference-virtual-machine.md)

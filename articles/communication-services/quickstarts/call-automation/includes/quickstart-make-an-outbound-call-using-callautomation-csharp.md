@@ -8,7 +8,9 @@ ms.date: 11/29/2023
 ms.topic: quickstart
 ms.service: azure-communication-services
 ms.subservice: call-automation
-ms.custom: mode-other
+ms.custom:
+  - mode-other
+  - sfi-ropc-nochange
 ---
 
 ## Prerequisites
@@ -196,7 +198,7 @@ if (parsedEvent is RecognizeCompleted recognizeCompleted) {
 
   // If choice is detected by phrase, choiceResult.RecognizedPhrase will have the phrase detected,  
   // If choice is detected using dtmf tone, phrase will be null  
-  logger.LogInformation("Recognize completed succesfully, labelDetected={labelDetected}, phraseDetected={phraseDetected}", labelDetected, phraseDetected);
+  logger.LogInformation("Recognize completed successfully, labelDetected={labelDetected}, phraseDetected={phraseDetected}", labelDetected, phraseDetected);
 
   var textToPlay = labelDetected.Equals(ConfirmChoiceLabel, StringComparison.OrdinalIgnoreCase) ? ConfirmedText : CancelText;
 

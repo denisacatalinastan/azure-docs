@@ -4,9 +4,11 @@ description: Learn about reliability in Azure DNS.
 author: anaharris-ms
 ms.author: anaharris
 ms.topic: reliability-article
-ms.custom: subject-reliability, references-regions
 ms.service: azure-traffic-manager
 ms.date: 02/02/2024
+ms.custom:
+  - subject-reliability
+  - sfi-image-nochange
 ---
 
 
@@ -69,7 +71,7 @@ The assumptions made for the solution are:
 
     *Figure - Create a DNS zone in Azure*
 
-1.  Within this zone, create three records (for example - www\.contoso.com, prod.contoso.com and dr.consoto.com) as show below.
+1.  Within this zone, create three records (for example - www\.contoso.com, prod.contoso.com and dr.contoso.com) as show below.
 
     ![Screenshot of creating DNS zone records.](../networking/media/disaster-recovery-dns-traffic-manager/create-dns-zone-records.png)
 

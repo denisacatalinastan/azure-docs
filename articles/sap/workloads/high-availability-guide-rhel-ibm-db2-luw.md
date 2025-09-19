@@ -3,7 +3,6 @@ title: Set up IBM Db2 HADR on Azure virtual machines (VMs) on RHEL | Microsoft D
 description: Establish high availability of IBM Db2 LUW on Azure virtual machines (VMs) RHEL.
 author: msjuergent
 manager: bburns
-ms.custom: devx-track-azurecli, devx-track-azurepowershell, linux-related-content
 keywords: 'SAP'
 ms.service: sap-on-azure
 ms.subservice: sap-vm-workloads
@@ -11,6 +10,12 @@ ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.date: 06/18/2024
 ms.author: juergent
+ms.custom:
+  - devx-track-azurecli
+  - devx-track-azurepowershell
+  - linux-related-content
+  - sfi-image-nochange
+# Customer intent: As a database administrator, I want to set up IBM Db2 with high availability and disaster recovery on Azure VMs using Pacemaker, so that I can ensure continuous data availability and minimize downtime for my SAP applications.
 ---
 # High availability of IBM Db2 LUW on Azure VMs on Red Hat Enterprise Linux Server
 
@@ -395,7 +400,7 @@ The following items are prefixed with either:
    # Replace bold strings with your instance name db2sid, database SID, and virtual IP address/Azure Load Balancer.
    sudo pcs resource create Db2_HADR_ID2 db2 instance='db2id2' dblist='ID2' master meta notify=true resource-stickiness=5000
    
-   #Configure resource stickiness and correct cluster notifications for master resoruce
+   #Configure resource stickiness and correct cluster notifications for master resource
    sudo pcs resource update Db2_HADR_ID2-master meta notify=true resource-stickiness=5000
    
    # Configure virtual IP - same as Azure Load Balancer IP
@@ -420,7 +425,7 @@ The following items are prefixed with either:
    # Replace bold strings with your instance name db2sid, database SID, and virtual IP address/Azure Load Balancer.
    sudo pcs resource create Db2_HADR_ID2 db2 instance='db2id2' dblist='ID2' promotable meta notify=true resource-stickiness=5000
    
-   #Configure resource stickiness and correct cluster notifications for master resoruce
+   #Configure resource stickiness and correct cluster notifications for master resource
    sudo pcs resource update Db2_HADR_ID2-clone meta notify=true resource-stickiness=5000
    
    # Configure virtual IP - same as Azure Load Balancer IP

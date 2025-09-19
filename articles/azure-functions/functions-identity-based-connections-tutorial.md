@@ -5,6 +5,9 @@ ms.service: azure-functions
 ms.topic: tutorial
 ms.date: 06/27/2024
 titleSuffix: Azure Functions
+ms.custom:
+  - sfi-image-nochange
+  - sfi-ropc-nochange
 
 #Customer intent: As a function developer, I want to learn how to use managed identities so that I can avoid needing to handle secrets or connection strings in my application settings.
 ---
@@ -30,7 +33,7 @@ After you complete this tutorial, you should complete the follow-on tutorial tha
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio).
 
-- The [.NET 6.0 SDK](https://dotnet.microsoft.com/download)
+- The [.NET SDK](https://dotnet.microsoft.com/download)
 
 - The [Azure Functions Core Tools](functions-run-local.md#v2) version 4.x.
 

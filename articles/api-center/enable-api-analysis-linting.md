@@ -3,19 +3,21 @@ title: Perform API linting and analysis - Azure API Center
 description: Configure linting of API definitions in your API center to analyze compliance of APIs with the organization's API style guide.
 ms.service: azure-api-center
 ms.topic: how-to
-ms.date: 06/29/2024
+ms.date: 12/03/2024
 ms.author: danlep
 author: dlepow
-ms.custom: devx-track-azurecli
+ms.custom:
+  - devx-track-azurecli
+  - sfi-image-nochange
 # Customer intent: As an API program manager, I want to lint the API definitions in my organization's API center and analyze whether my APIs comply with my organization's API style guide.
 ---
 
 # Enable API analysis in your API center - self-managed
 
-This article explains how to enable API analysis in [Azure API Center](overview.md) by manually setting up a linting engine and triggers. API analysis offers linting capabilities to analyze API definitions in your organization's API center. Linting ensures your API definitions adhere to organizational style rules, generating both individual and summary reports. Use API analysis to identify and correct common errors and inconsistencies in your API definitions.
+This article explains how to enable API analysis in [Azure API Center](overview.md) by manually setting up a linting engine and triggers. These capabilities analyze your API definitions for adherence to organizational style rules, generating both individual and summary reports. API analysis helps identify and correct common errors and inconsistencies in your API definitions.
 
 > [!NOTE]
-> In preview, Azure API Center can also automatically set up a linting engine and any required dependencies and triggers. [Learn more](enable-managed-api-analysis-linting.md). 
+> In preview, Azure API Center [automatically configures](enable-managed-api-analysis-linting.md) a default linting engine and dependencies for API analysis. If you enable self-managed analysis as described in this article, you override these built-in features.  
 
 > [!VIDEO https://www.youtube.com/embed/m0XATQaVhxA]
 
@@ -119,7 +121,7 @@ To deploy the Azure Functions app that runs the linting function on API definiti
 1. Clone the [GitHub repository](https://github.com/Azure/APICenter-Analyzer/) and open it in Visual Studio Code.
 1. In the `resources/rulesets` folder, you can find an `oas.yaml` file. This file reflects your current API style guide and can be modified based on your organizational needs and requirements.
 1. Optionally, run the function app locally to test it. For details, see the [README](https://github.com/Azure/APICenter-Analyzer/tree/preview#-configure--run-your-function-locally) file in the repository.
-1. Deploy the function app to Azure. For steps, see [Quickstart: Create a function in Azure with TypeScript using Visual Studio Code](../azure-functions/create-first-function-vs-code-typescript.md#sign-in-to-azure).
+1. Deploy the function app to Azure. For steps, see [Quickstart: Create a function in Azure with TypeScript using Visual Studio Code](../azure-functions/how-to-create-function-vs-code.md?pivot=programming-language-typescript#sign-in-to-azure).
 
     > [!NOTE]
     > Deploying the function app might take a few minutes.

@@ -1,12 +1,16 @@
 ---
-title: 'Securely connect to Azure resources'
+title: 'Securely Connect to Azure Resources'
 description: Shows you how to connect to other Azure services such as a database, storage, or another app. This overview recommends the more secure method for connecting.
 author: cephalin
 ms.author: cephalin
-ms.topic: article
+ms.topic: overview
 ms.date: 07/06/2024
-ms.custom: AppServiceConnectivity
 #customer intent: As a developer, I want to learn how to securely connect to Azure resources from Azure App Service so that I can protect sensitive data and ensure secure communication.
+ms.service: azure-app-service
+ms.custom:
+  - AppServiceConnectivity
+  - sfi-image-nochange
+  - sfi-ropc-nochange
 ---
 # Secure connectivity to Azure services and databases from Azure App Service
 
@@ -84,13 +88,14 @@ Examples of using application secrets to connect to a database:
 - [Tutorial: Deploy an ASP.NET app to Azure with Azure SQL Database](app-service-web-tutorial-dotnet-sqldatabase.md)
 - [Tutorial: Deploy a PHP, MySQL, and Redis app to Azure App Service](tutorial-php-mysql-app.md)
 - [Deploy a Node.js + MongoDB web app to Azure](tutorial-nodejs-mongodb-app.md)
-- [Deploy a Python (Django or Flask) web app with PostgreSQL in Azure](tutorial-python-postgresql-app.md)
+- [Deploy a Python (Flask) web app with PostgreSQL in Azure](tutorial-python-postgresql-app-flask.md)
+- [Deploy a Python (Django) web app with PostgreSQL in Azure](tutorial-python-postgresql-app-django.md)
+- [Deploy a Python (FastAPI) web app with PostgreSQL in Azure](tutorial-python-postgresql-app-fastapi.md)
 - [Tutorial: Build a Tomcat web app with Azure App Service on Linux and MySQL](tutorial-java-tomcat-mysql-app.md)
 - [Tutorial: Build a Java Spring Boot web app with Azure App Service on Linux and Azure Cosmos DB](tutorial-java-spring-cosmosdb.md)
 
-## Next steps
+## Related content
 
-Learn how to:
 - Securely store secrets in [Azure Key Vault](app-service-key-vault-references.md).
 - Access resources using a [managed identity](overview-managed-identity.md).
 - Store secrets using App Service [app settings](configure-common.md).

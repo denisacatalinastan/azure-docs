@@ -3,7 +3,7 @@ title: Use managed identities for Microsoft Azure Data Manager for Energy on Azu
 description: Learn how to use a managed identity to access Azure Data Manager for Energy from other Azure services. 
 author: sandeepchads
 ms.author: sancha
-ms.service: energy-data-services	
+ms.service: azure-data-manager-energy
 ms.topic: how-to
 ms.date: 01/04/2023
 ms.custom: template-how-to
@@ -44,7 +44,7 @@ Before you begin, create the following resources:
 
 * [Azure function app](../azure-functions/functions-create-function-app-portal.md)
 
-* Python-based Azure function, by using the [Azure portal](../azure-functions/create-first-function-vs-code-python.md) or the [command line](../azure-functions/create-first-function-cli-python.md)
+* Python-based Azure function, by using the [Azure portal](../azure-functions/how-to-create-function-vs-code.md?pivot=programming-language-python) or the [command line](../azure-functions/how-to-create-function-azure-cli.md?pivots=programming-language-python)
 
 * [User-assigned managed identity](../active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities.md)
 

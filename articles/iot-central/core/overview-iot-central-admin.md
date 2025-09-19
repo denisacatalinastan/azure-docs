@@ -5,7 +5,7 @@ author: dominicbetts
 ms.author: dobett 
 ms.date: 03/04/2024
 ms.topic: conceptual
-ms.service: iot-central
+ms.service: azure-iot-central
 services: iot-central
 ms.custom: [mvc, iot-central-frontdoor]
 
@@ -25,6 +25,16 @@ IoT Central application administration includes the following tasks:
 - Export and share applications.
 - Monitor application health.
 - DevOps integration.
+
+> [!IMPORTANT]
+> IoT Central applications that remain inactive for more than 30 consecutive days are subject to deletion. To avoid this outcome, please ensure your applications maintain regular activity. Examples of qualifying activity include:
+> 
+> - User logins 
+> - API calls 
+> - Continuous Data Exports 
+> - Device message overages
+> 
+> IoT Central applications that don't manage more than two (2) [real devices](howto-manage-devices-individually.md) and don't incur monthly message overages are also subject to deletion.
 
 ## Create applications
 

@@ -11,6 +11,8 @@ ms.author: chrupa
 
 # MedTech service and Microsoft Teams notifications
 
+[!INCLUDE [IoT deprecation](../includes/iot-deprecation.md)]
+
 In this article, learn about using the MedTech service and Microsoft Teams for notifications.
 
 ## The MedTech service and Teams notifications reference architecture

@@ -4,9 +4,10 @@ description: Shows you how to use Resource Manager templates to upgrade from Azu
 author: normesta
 ms.service: azure-blob-storage
 ms.custom: devx-track-azurepowershell
-ms.topic: conceptual
-ms.date: 01/18/2024
+ms.topic: concept-article
+ms.date: 11/15/2024
 ms.author: normesta
+# Customer intent: As a cloud architect, I want to upgrade my Azure Blob Storage to Data Lake Storage, so that I can leverage enhanced capabilities like hierarchical namespace, improved security, and performance optimizations for big data analytics workloads.
 ---
 
 # Upgrade Azure Blob Storage with Azure Data Lake Storage capabilities
@@ -36,17 +37,12 @@ The following features are supported for Data Lake Storage accounts, but are not
 - Blob snapshots
 - Encryption scopes
 - Immutable storage
-- Last access time tracking for lifecycle management
 - Soft delete for blobs
 - Soft delete for containers
 
 If your storage account has such features enabled, you must disable them before performing the upgrade. If you want to resume using the features after the upgrade is complete, re-enable them.
 
 In some cases, you will have to allow time for clean-up operations after a feature is disabled before upgrading. One example is the [blob soft delete](soft-delete-blob-overview.md) feature. You must disable blob soft delete and then allow all soft-delete blobs to expire before you can upgrade the account.
-
-> [!IMPORTANT]
-> You cannot upgrade a storage account to Data Lake Storage that has **ever** had the change feed feature enabled.
-> Simply disabling change feed will not allow you to perform an upgrade. Instead, you must create an account with the hierarchical namespace feature enabled on it, and move then transfer your data into that account.
 
 ### Remove page blobs from the storage account
 
@@ -315,7 +311,7 @@ az storage account hns-migration stop -n <storage-account-name> -g <resource-gro
    > [!div class="mx-imgBorder"]
    > ![Account endpoints](./media/upgrade-to-data-lake-storage-gen2-how-to/storage-endpoints.png)
   
-3. For Hadoop workloads that use Windows Azure Storage Blob driver or [WASB](https://hadoop.apache.org/docs/current/hadoop-azure/index.html) driver, make sure to modify them to use the [Azure Blob File System (ABFS)](https://hadoop.apache.org/docs/stable/hadoop-azure/abfs.html) driver. Unlike the WASB driver that makes requests to the **Blob service** endpoint, the ABFS driver will make requests to the **Data Lake Storage** endpoint of your account.
+3. For Hadoop workloads that use Windows Azure Storage Blob driver or [WASB](https://hadoop.apache.org/docs/current/hadoop-azure/index.html) driver, make sure to modify them to use the [Azure Blob File System (ABFS)](data-lake-storage-abfs-driver.md) driver. Unlike the WASB driver that makes requests to the **Blob service** endpoint, the ABFS driver will make requests to the **Data Lake Storage** endpoint of your account.
 
 2. Test custom applications to ensure that they work as expected with your upgraded account. 
 

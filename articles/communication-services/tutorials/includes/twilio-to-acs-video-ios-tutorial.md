@@ -8,7 +8,9 @@ author: sloanster
 ms.author: micahvivion
 ms.service: azure-communication-services
 ms.subservice: calling
-ms.custom: mode-other
+ms.custom:
+  - mode-other
+  - sfi-ropc-nochange
 ---
 
 ## Prerequisites
@@ -37,7 +39,7 @@ This open source prebuilt set of controls enables you to create aesthetically pl
 
 ## Installation
 
-To start the migration from Twilio Video, the first step is to install the Azure Communication Services Calling SDK for iOS to your project. You can configure these parameters using`Cocoapods`.
+To start the migration from Twilio Video, the first step is to install the Azure Communication Services Calling SDK for iOS to your project. You can configure these parameters using`CocoaPods`.
 
 1. To create a Podfile for your application, open the terminal and navigate to the project folder and run:
 
@@ -197,7 +199,7 @@ class ApplicationCallAgentDelegate: NSObject, CallAgentDelegate {
  
     func callAgent(_ callAgent: CallAgent, didUpdateCalls args: CallsUpdatedEventArgs) {} 
  
-    func callAgent(_ callAgent: CallAgent, didRecieveIncomingCall incomingCall: IncomingCall) { 
+    func callAgent(_ callAgent: CallAgent, didReceiveIncomingCall incomingCall: IncomingCall) { 
         // This is called when the application receives an incoming call 
         // An application could use this callback to  display an incoming call banner 
         // or report an incoming call to CallKit 

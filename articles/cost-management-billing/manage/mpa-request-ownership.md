@@ -1,20 +1,22 @@
 ---
 title: Transfer Azure product billing ownership to your Microsoft Partner Agreement (MPA)
 description: Learn how to request billing ownership of Azure billing products from other users for a Microsoft Partner Agreement (MPA).
-author: bandersmsft
-ms.reviewer: amberbhargava
+author: jkinma39
+ms.reviewer: jkinma
 ms.service: cost-management-billing
 ms.subservice: billing
 ms.topic: how-to
-ms.date: 03/26/2024
-ms.author: banders
+ms.date: 07/29/2025
+ms.author: jkinma
+ms.custom:
+- build-2025
 ---
 
 # Transfer Azure product billing ownership to your Microsoft Partner Agreement (MPA)
 
-An Azure Expert MSP can request to transfer their customer's Enterprise subscriptions and reservations to the Microsoft Partner Agreement (MPA) that they manage. 
+An Azure Expert MSP can request to transfer their customer's Enterprise subscriptions, reservations and savings plans to the Microsoft Partner Agreement (MPA) that they manage. 
 
-Supported product (subscriptions and reservations) billing ownership transfer options include:
+Supported product (subscriptions, reservations and savings plans) billing ownership transfer options include:
 
 - A direct Enterprise Agreement transfer to an Azure plan under the MPA
 - An enterprise Microsoft Customer Agreement transfer to an Azure plan under the MPA
@@ -32,7 +34,9 @@ There are three options to transfer products:
 
 - Transfer only subscriptions
 - Transfer only reservations
-- Transfer both subscriptions and reservations
+- Transfer only savings plans
+
+- Transfer subscriptions, reservations and savings plans
 
 [!INCLUDE [cost-management-billing-subscription-b2b-b2c-transfer-note](../../../includes/cost-management-billing-subscription-b2b-b2c-transfer-note.md)]
 
@@ -46,13 +50,13 @@ There are three options to transfer products:
     1. [Confirm that the customer has accepted the Microsoft Customer Agreement](/partner-center/confirm-customer-agreement).
 1. Set up an [Azure plan](/partner-center/purchase-azure-plan) for the customer. If the customer is purchasing through multiple resellers, you need to set up an Azure plan for each combination of a customer and a reseller.
 
-When there's is a currency change during or after an EA enrollment transfer, reservations paid for monthly are canceled for the source enrollment. Cancellation happens at the time of the next monthly payment for an individual reservation. The cancellation is intentional and only affects monthly, not up front, reservation purchases. For more information, see [Transfer Azure Enterprise enrollment accounts and subscriptions](ea-transfers.md#prerequisites-1).
+When there's a currency change during or after an EA enrollment transfer, reservations paid for monthly are canceled for the source enrollment. Cancellation happens at the time of the next monthly payment for an individual reservation. The cancellation is intentional and only affects monthly, not up front, reservation purchases. For more information, see [Transfer Azure Enterprise enrollment accounts and subscriptions](ea-transfers.md#prerequisites-1).
 
 Before you begin, make sure that the people involved in the product transfer have the required permissions. 
 
-### Required permission for the transfer requestor
+### Required permission for the transfer requester
 
-To request the billing ownership, you must have **Global Admin** or **Admin Agents** role. To learn more, see [Partner Center - Assign users roles and permissions](/partner-center/permissions-overview).
+To request the billing ownership, you must have the **Admin Agent** or [billing admin](/partner-center/account-settings/permissions-overview#billing-admin-role) role. To learn more, see [Partner Center - Assign users roles and permissions](/partner-center/permissions-overview).
 
 ### Required permission for the subscription transfer recipient 
 
@@ -87,7 +91,9 @@ The recipient of the transfer request uses the following procedure to review and
 
 - Transfer one or more subscriptions only
 - Transfer one or more reservations only
-- Transfer both subscriptions and reservations
+- Transfer one or more savings plans only
+
+- Transfer subscriptions, reservations and savings plans
 
 1. The user gets an email with instructions to review your transfer request. Select **Review the request** to open it in the Azure portal.  
     :::image type="content" source="./media/mpa-request-ownership/mpa-review-transfer-request-email.png" alt-text="Screenshot that shows review transfer request email." lightbox="./media/mpa-request-ownership/mpa-review-transfer-request-email.png" :::  
@@ -193,7 +199,7 @@ The partners should work with the customer to get access to subscriptions. The p
 
 The Cost Management connector for Power BI supports Enterprise Agreements, direct Microsoft Customer Agreements and Microsoft Partner Agreements on Billing Account and Billing Profile scopes. For more information about Cost Management connector support, see [Create visuals and reports with the Cost Management connector in Power BI Desktop](/power-bi/connect-data/desktop-connect-azure-cost-management). After you transfer a subscription from one of the agreements to a Microsoft Partner Agreement, your Power BI reports stop working.
 
-As an alternative, you can always use Exports in Cost Management to save the consumption and usage information and then use it in Power BI. For more information, see [Create and manage exported data](../costs/tutorial-export-acm-data.md).
+As an alternative, you can always use Exports in Cost Management to save the consumption and usage information and then use it in Power BI. For more information, see [Create and manage exported data](../costs/tutorial-improved-exports.md).
 
 ### Azure support plan
 
@@ -225,7 +231,7 @@ If these two directories aren't the same, the subscriptions couldn't be transfer
 
 ### EA subscription in the non-organization directory
 
-The EA subscriptions from non-organization directories can be transferred as long as the directory has a reseller relationship with the CSP. If the directory doesn’t have a reseller relationship, you need to make sure to have the organization user in the directory as a *Global Administrator* who can accept the partner relationship. The domain name portion of the username must either be the initial default domain name *[domain name].onmicrosoft.com* or a verified, non-federated custom domain name such as *contoso.com*.  
+The EA subscriptions from non-organization directories can be transferred as long as the directory has a reseller relationship with the CSP. If the directory doesn’t have a reseller relationship, you need to make sure to have the organization user in the directory as a [billing admin](/partner-center/account-settings/permissions-overview#billing-admin-role) who can accept the partner relationship. The domain name portion of the username must either be the initial default domain name *[domain name].onmicrosoft.com* or a verified, non-federated custom domain name such as *contoso.com*.  
 
 To add a new user to the directory, see [Quickstart: Add new users to Microsoft Entra ID to add the new user to the directory](../../active-directory/fundamentals/add-users-azure-active-directory.md).
 

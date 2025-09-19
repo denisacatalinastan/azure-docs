@@ -4,7 +4,7 @@ description: Use Microsoft Entra ID and Azure role-based access control (RBAC) t
 author: zhenlan
 ms.author: zhenlwa
 ms.date: 10/05/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: azure-app-configuration
 
 ---
@@ -32,7 +32,7 @@ All requests for [control plane](../azure-resource-manager/management/control-pl
 
 - **App Configuration Contributor**: Use this role to manage only App Configuration resource. This role does not grant access to manage other Azure resources. It grants access to the resource's access keys. While the App Configuration data can be accessed using access keys, this role doesn't grant direct access to the data using Microsoft Entra ID. It grants access to recover deleted App Configuration resource but not to purge them. To purge deleted App Configuration resources, use the **Contributor** role. 
 - **App Configuration Reader**: Use this role to read only App Configuration resource. This role does not grant access to read other Azure resources. It doesn't grant access to the resource's access keys, nor to the data stored in App Configuration.
-- **Contributor** or **Owner**: Use this role to manage the App Configuration resource while also be able to manage other Azure resources. This role is a privileged adminstrator role. It grants access to the resource's access keys. While the App Configuration data can be accessed using access keys, this role doesn't grant direct access to the data using Microsoft Entra ID.
+- **Contributor** or **Owner**: Use this role to manage the App Configuration resource while also be able to manage other Azure resources. This role is a privileged administrator role. It grants access to the resource's access keys. While the App Configuration data can be accessed using access keys, this role doesn't grant direct access to the data using Microsoft Entra ID.
 - **Reader**: Use this role to read App Configuration resource while also be able to read other Azure resources. This role doesn't grant access to the resource's access keys, nor to the data stored in App Configuration.
 
 > [!NOTE]

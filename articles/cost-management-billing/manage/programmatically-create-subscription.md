@@ -1,13 +1,13 @@
 ---
 title: Create Azure subscriptions programmatically
 description: This article helps you understand options available to programmatically create Azure subscriptions.
-author: bandersmsft
+author: Nicholak-MS
+ms.author: nicholak
+ms.reviewer: nicholak
 ms.service: cost-management-billing
 ms.subservice: billing
 ms.topic: how-to
-ms.date: 03/21/2024
-ms.reviewer: andalmia
-ms.author: banders 
+ms.date: 08/21/2025
 ---
 
 # Create Azure subscriptions programmatically

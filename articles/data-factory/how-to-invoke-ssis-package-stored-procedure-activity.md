@@ -7,7 +7,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2024
 ms.author: chugu 
-ms.custom: devx-track-azurepowershell
+ms.custom:
+  - devx-track-azurepowershell
+  - sfi-image-nochange
+  - sfi-ropc-nochange
 ---
 # Run an SSIS package with the Stored Procedure activity
 
@@ -42,7 +45,7 @@ Next, you will add a stored procedure activity to a new pipeline and configure i
 
     :::image type="content" source="./media/how-to-invoke-ssis-package-stored-procedure-activity/drag-drop-sproc-activity.png" alt-text="Drag-and-drop stored procedure activity":::
 
-3. Select the **Stored procedure** activity you just added to the designer surface, and then the **Settings** tab, and click **+ New** beside the **Linked service**. You create a connection to the database in Azure SQL Database that hosts the SSIS Catalog (SSIDB database). 
+3. Select the **Stored procedure** activity you just added to the designer surface, and then the **Settings** tab, and click **+ New** beside the **Linked service**. You create a connection to the database in Azure SQL Database that hosts the SSIS Catalog (SSISDB database). 
    
     :::image type="content" source="./media/how-to-invoke-ssis-package-stored-procedure-activity/new-linked-service-button.png" alt-text="New linked service button":::
 

@@ -7,7 +7,10 @@ ms.topic: reference
 
 # Dell Edge Gateway 3200
 
-This article describes the Dell Edge Gateway 3200 appliance for operational technology (OT) sensors monitoring production lines. The Dell Edge Gateway 3200 is also available for the on-premises management console.
+This article describes the Dell Edge Gateway 3200 appliance for operational technology (OT) sensors monitoring production lines.
+
+> [!NOTE]
+> Legacy appliances are certified but aren't currently offered as pre-configured appliances.
 
 |Appliance characteristic  | Description|
 |---------|---------|
@@ -103,4 +106,3 @@ Continue learning about the system requirements for physical or virtual applianc
 Then, use any of the following procedures to continue:
 
 - [Download software for an OT sensor](../ot-deploy/install-software-ot-sensor.md#download-software-files-from-the-azure-portal)
-- [Download software files for an on-premises management console](../legacy-central-management/install-software-on-premises-management-console.md#download-software-files-from-the-azure-portal)

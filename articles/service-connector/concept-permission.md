@@ -1,16 +1,20 @@
 ---
 title: Permission requirement for Service Connector
-description: Resource permission requirement
+description: Learn about the resource permission requirements for creating connections using Service Connector in Azure.
 author: maud-lv
 ms.author: malev
 ms.service: service-connector
-ms.topic: conceptual
-ms.date: 08/04/2023
+ms.topic: concept-article
+ms.date: 12/18/2024
 ---
 
-# Permission requirement for Service Connector
+# Permission requirements for Service Connector
 
-Service Connector creates connections between Azure services using an [on-behalf-of token](../active-directory/develop/v2-oauth2-on-behalf-of-flow.md). Creating a connection to a specific Azure resource requires its corresponding permissions.
+When using Service Connector to create connections between Azure services, it's essential to ensure that the necessary permissions are granted. This document outlines the permission requirements for various Azure resources to facilitate seamless connection creation.
+
+Service Connector creates connections between Azure services using an [on-behalf-of tokens](../active-directory/develop/v2-oauth2-on-behalf-of-flow.md).
+
+Creating connections to Azure resources requires appropriate permissions.
 
 ### App Service  
 
@@ -44,9 +48,11 @@ Service Connector creates connections between Azure services using an [on-behalf
 > |`Microsoft.AppPlatform/Spring/read`|Get Azure Spring Apps service instance(s)|
 > |`Microsoft.AppPlatform/Spring/apps/read`|Get the applications for a specific Azure Spring Apps service instance|
 > |`Microsoft.AppPlatform/Spring/apps/write`|Create or update the application for a specific Azure Spring Apps service instance|
+> |`Microsoft.AppPlatform/Spring/apps/listConnectorProps/action`|Get the connector properties of Azure Spring Apps application|
 > |`Microsoft.AppPlatform/Spring/apps/deployments/*/read`|Get the deployments for a specific application|
 > |`Microsoft.AppPlatform/Spring/apps/deployments/*/write`|Create or update the deployment for a specific application|
 > |`Microsoft.AppPlatform/Spring/apps/deployments/*/delete`|Delete the deployment for a specific application|
+> |`Microsoft.AppPlatform/Spring/apps/deployments/listConnectorProps/action`|Get the connector properties of the deployment for a specific application|
 
 ### Azure Container Apps 
 
@@ -318,5 +324,8 @@ Service Connector may need to grant permissions to your identity if a connection
 > |`Microsoft.Network/networkSecurityGroups/join/action`|Joins a network security group. Not Alertable.|
 > |`Microsoft.Network/routeTables/join/action`|Joins a route table. Not Alertable.|
 
-> [!div class="nextstepaction"]
-> [High availability](./concept-availability.md)
+## Related links
+
+- [FAQ](./faq.yml)
+- [Service internals](./concept-service-connector-internals.md)
+- [Microsoft Entra roles assigned by Service Connector](./concept-microsoft-entra-roles.md)

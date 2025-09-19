@@ -3,10 +3,12 @@
 metadata:
   title: Assign Azure roles using the Azure portal - Azure RBAC
   description: Learn how to grant access to Azure resources for users, groups, service principals, or managed identities using the Azure portal and Azure role-based access control (Azure RBAC).
-  author: rolyon
+
+  author: rolyon 
   ms.author: rolyon
-  manager: amycolannino
-  ms.date: 08/30/2024
+  manager: pmwongera
+  ms.date: 08/01/2025
+
   ms.service: role-based-access-control
   ms.topic: how-to
   ms.custom:
@@ -73,6 +75,20 @@ procedureSection:
           You can search for a role by name or by description. You can also filter roles by type and category.
 
         ![Screenshot of Add role assignment page with Role tab.](./media/shared/roles.png)
+
+        
+        Note, If you're unsure of which role you need to assign, you can now use Copilot to help you select the appropriate role. (Limited preview. This capability is being deployed in stages, so it might not be available yet in your tenant or your interface might look different.)
+        
+      - |
+        (Optional) In the **Role** tab, click the **Copilot can help pick role** button. The Copilot dialog box opens. 
+
+        ![Screenshot of Copilot button in the Add role assignment page.](./media/role-assignments-portal/copilot-for-role-assignment.png)
+        
+        In the dialog box, you can add descriptive prompts to tell Copilot your requirements for the role, and what you need a user to be authorized to do, for example, *"Help me select a role to deploy and manage Azure functions."*, or *"Which role should I use if I
+        want a user to manage and view a workspace?"* Using phrases such as *'Help me select...'* or *'Which role should I use to...'* helps Copilot understand your intent more clearly in order to deliver the best results.
+
+        From the direction of your prompt, Copilot suggests a role, or multiple roles, based on the requirements provided. Copilot asks you to confirm by **Select permissions**. Copilot then recommends a role based on the
+        criteria provided. You can **Select role**, or you can ask Copilot to **Recommend other roles**. If you select **Select role**, you're taken back to the **Add role assignment** page where you can select the recommended role and view its details.
       - |
         If you want to assign a privileged administrator role, select the **Privileged administrator roles** tab to select the role.
 
@@ -167,15 +183,13 @@ procedureSection:
         Follow the steps in [Add or edit Azure role assignment conditions](conditions-role-assignments-portal.md#step-3-review-basics).
 
   - title: |
-      Step 6: Select assignment type (Preview)
+      Step 6: Select assignment type
     summary: |
-      > [!IMPORTANT]
-      > Azure role assignment integration with Privileged Identity Management is currently in PREVIEW.
-      > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+      If you have a Microsoft Entra ID P2 or Microsoft Entra ID Governance license, an **Assignment type** tab will appear for management group, subscription, and resource group scopes. Use eligible assignments to provide just-in-time access to a role. Users with eligible and/or time-bound assignments must have a valid license.
+      
+      If you don't want to use the PIM functionality, select the **Active** assignment type and **Permanent** assignment duration options. These settings create a role assignment where the principal always has permissions in the role.
 
-      If you have a Microsoft Entra ID P2 or Microsoft Entra ID Governance license, an **Assignment type** tab will appear for management group, subscription, and resource group scopes. Use eligible assignments to provide just-in-time access to a role. This capability is being deployed in stages, so it might not be available yet in your tenant or your interface might look different. For more information, see [Integration with Privileged Identity Management (Preview)](./role-assignments.md#integration-with-privileged-identity-management-preview).
-
-      If you don't want to use the PIM functionality, select the **Active** assignment type and **Permanent** assignment duration options. These settings create a role assignment where the principal always has permissions in the role. 
+       This capability is being deployed in stages, so it might not be available yet in your tenant or your interface might look different. For more information, see [Eligible and time-bound role assignments in Azure RBAC](././pim-integration.md).
     steps:
       - |
         On the **Assignment type** tab, select the **Assignment type**.
@@ -222,13 +236,9 @@ procedureSection:
         If you don't see the description for the role assignment, click **Edit columns** to add the **Description** column.
 
   - title: |
-      Edit assignment (Preview)
+      Edit assignment
     summary: |
-      > [!IMPORTANT]
-      > Azure role assignment integration with Privileged Identity Management is currently in PREVIEW.
-      > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-
-      If you have a Microsoft Entra ID P2 or Microsoft Entra ID Governance license, you can edit your role assignment type settings. For more information, see [Integration with Privileged Identity Management (Preview)](./role-assignments.md#integration-with-privileged-identity-management-preview).
+      If you have a Microsoft Entra ID P2 or Microsoft Entra ID Governance license, you can edit your role assignment type settings. For more information, see [Eligible and time-bound role assignments in Azure RBAC](./pim-integration.md).
     steps:
       - |
         On the **Access control (IAM)** page, click the **Role assignments** tab to view the role assignments at this scope.
@@ -241,7 +251,7 @@ procedureSection:
 
         The **Edit assignment** pane appears where you can update the role assignment type settings. The pane might take a few moments to open.
 
-        :::image type="content" source="./media/role-assignments-portal/assignment-type-edit.png" alt-text="Screenshot of Edit assignment pane with Assignment type options displayed." lightbox="./media/role-assignments-portal/assignment-type-edit.png":::
+        :::image type="content" source="./media/shared/assignment-type-edit.png" alt-text="Screenshot of Edit assignment pane with Assignment type options displayed." lightbox="./media/shared/assignment-type-edit.png":::
       - |
         When finished, click **Save**.
 

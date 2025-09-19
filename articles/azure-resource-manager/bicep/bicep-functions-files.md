@@ -3,7 +3,7 @@ title: Bicep functions - files
 description: Describes the functions to use in a Bicep file to load content from a file.
 ms.topic: reference
 ms.custom: devx-track-bicep
-ms.date: 11/03/2023
+ms.date: 02/12/2025
 ---
 
 # File functions for Bicep
@@ -221,7 +221,7 @@ resource exampleScript 'Microsoft.Resources/deploymentScripts@2023-08-01' = {
     }
   }
   properties: {
-    azPowerShellVersion: '8.3'
+    azPowerShellVersion: '14.0'
     scriptContent: loadTextContent('myscript.ps1')
     retentionInterval: 'P1D'
   }

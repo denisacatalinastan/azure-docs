@@ -1,13 +1,13 @@
 ---
 title: Details of the policy exemption structure
 description: Describes the policy exemption definition used by Azure Policy to exempt resources from evaluation of initiatives or definitions.
-ms.date: 09/05/2024
+ms.date: 03/04/2025
 ms.topic: conceptual
 ---
 
 # Azure Policy exemption structure
 
-The Azure Policy exemptions feature is used to _exempt_ a resource hierarchy or an individual resource from evaluation of initiatives or definitions. Resources that are _exempt_ count toward overall compliance, but can't be evaluated or have a temporary waiver. For more information, see [Understand applicability in Azure Policy](./policy-applicability.md). Azure Policy exemptions also work with the following [Resource Manager modes](./definition-structure.md#resource-manager-modes): `Microsoft.Kubernetes.Data`, `Microsoft.KeyVault.Data`, and `Microsoft.Network.Data`.
+The Azure Policy exemptions feature is used to _exempt_ a resource hierarchy or an individual resource from evaluation of initiatives or definitions. Resources that are _exempt_ count toward overall compliance, but can't be evaluated or have a temporary waiver. For more information, see [Understand applicability in Azure Policy](./policy-applicability.md). Azure Policy exemptions also work with the following [Resource Manager modes](./definition-structure-basics.md#resource-manager-modes): `Microsoft.Kubernetes.Data`, `Microsoft.KeyVault.Data`, and `Microsoft.Network.Data`.
 
 You use JavaScript Object Notation (JSON) to create a policy exemption. The policy exemption contains elements for:
 
@@ -160,7 +160,7 @@ Regularly revisit your exemptions to ensure that all eligible items are appropri
 
 ## Next steps
 
-- Learn about [Azure Resource Graph queries on exemptions](../samples/resource-graph-samples.md#azure-policy-exemptions).
+- Learn about [Azure Resource Graph queries on exemptions](/azure/governance/policy/samples/resource-graph-samples#azure-policy-exemptions).
 - Learn about [the difference between exclusions and exemptions](./scope.md#scope-comparison).
 - Review the [Microsoft.Authorization policyExemptions resource type](/azure/templates/microsoft.authorization/policyexemptions?tabs=json).
 - Learn how to [get compliance data](../how-to/get-compliance-data.md).

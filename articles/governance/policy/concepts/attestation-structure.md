@@ -1,7 +1,7 @@
 ---
 title: Details of the Azure Policy attestation structure
 description: Describes the components of the Azure Policy attestation JSON object.
-ms.date: 07/01/2024
+ms.date: 03/04/2025
 ms.topic: conceptual
 ---
 
@@ -75,4 +75,4 @@ Because attestations are a separate resource from policy assignments, they have 
 
 - [Azure Policy definitions effect basics](effect-basics.md).
 - [Azure Policy initiative definition structure](./initiative-definition-structure.md).
-- [Azure Policy samples](../samples/index.md).
+- [Azure Policy samples](/azure/governance/policy/samples/index).

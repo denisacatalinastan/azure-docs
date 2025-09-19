@@ -6,6 +6,7 @@ ms.suite: integration
 ms.reviewer: estfan, azla
 ms.topic: how-to
 ms.date: 01/04/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Connect to an FTP server from workflows in Azure Logic Apps
@@ -51,6 +52,8 @@ The FTP connector has different versions, based on [logic app type and host envi
 
 * The FTP managed or Azure-hosted connector can create a limited number of connections to the FTP server, based on the connection capacity in the Azure region where your logic app resource exists. If this limit poses a problem in a Consumption logic app workflow, consider creating a Standard logic app workflow and use the FTP built-in connector instead.
 
+* Both the built-in and managed FTP connector support only explicit FTP over FTPS, which is an extension of TLS. Neither connector version supports implicit FTPS.
+
 ## Prerequisites
 
 * An Azure account and subscription. If you don't have an Azure subscription, [sign up for a free Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
@@ -81,7 +84,7 @@ The FTP managed connector and built-in connector each have only one trigger avai
 
 The following steps use the Azure portal, but with the appropriate Azure Logic Apps extension, you can also use the following tools to create and edit logic app workflows:
 
-* Consumption logic app workflows: [Visual Studio](../logic-apps/quickstart-create-logic-apps-with-visual-studio.md) or [Visual Studio Code](../logic-apps/quickstart-create-logic-apps-visual-studio-code.md)
+* Consumption logic app workflows: [Visual Studio Code](../logic-apps/quickstart-create-logic-apps-visual-studio-code.md)
 
 * Standard logic app workflows: [Visual Studio Code](../logic-apps/create-single-tenant-workflows-visual-studio-code.md)
 
@@ -210,11 +213,10 @@ A Consumption logic app workflow can use only the FTP managed connector. However
 
 * Built-in connector actions: These actions run only in a Standard logic app workflow.
 
-The following steps use the Azure portal, but with the appropriate Azure Logic Apps extension, you can also use the following tools to create and edit logic app workflows:
+The following steps use the Azure portal, but with the appropriate Azure Logic Apps extension, you can also use the following tools to build logic app workflows:
 
-* Consumption logic app workflows: [Visual Studio](../logic-apps/quickstart-create-logic-apps-with-visual-studio.md) or [Visual Studio Code](../logic-apps/quickstart-create-logic-apps-visual-studio-code.md)
-
-* Standard logic app workflows: [Visual Studio Code](../logic-apps/create-single-tenant-workflows-visual-studio-code.md)
+* Consumption workflows: [Visual Studio Code](../logic-apps/quickstart-create-logic-apps-visual-studio-code.md)
+* Standard workflows: [Visual Studio Code](../logic-apps/create-single-tenant-workflows-visual-studio-code.md)
 
 Before you can use an FTP action, your workflow must already start with a trigger, which can be any kind that you choose. For example, you can use the generic **Recurrence** built-in trigger to start your workflow on specific schedule.
 

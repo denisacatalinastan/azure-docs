@@ -9,12 +9,14 @@ ms.service: azure-api-management
 ms.topic: how-to
 ms.date: 06/02/2023
 ms.author: danlep
-ms.custom: engagement-fy23
+ms.custom:
+  - engagement-fy23
+  - sfi-image-nochange
 ---
 
 # How to configure notifications and notification templates in Azure API Management
 
-[!INCLUDE [api-management-availability-premium-dev-standard-basic-standardv2-basicv2](../../includes/api-management-availability-premium-dev-standard-basic-standardv2-basicv2.md)]
+[!INCLUDE [api-management-availability-premium-dev-standard-basic-premiumv2-standardv2-basicv2](../../includes/api-management-availability-premium-dev-standard-basic-premiumv2-standardv2-basicv2.md)]
 
 API Management provides the ability to configure email notifications for specific events, and to configure the email templates that are used to communicate with the administrators and developers of an API Management instance. This article shows how to configure notifications for the available events, and provides an overview of configuring the email templates used for these events.
 
@@ -112,7 +114,7 @@ Recipients of email notifications from API Management could be affected when you
 
     * **DKIM authentication** - To generate a valid signature for DKIM for email authentication, API Management requires the private key associated with the domain of the originating email address. However, it is currently not possible to upload this private key in API Management. Therefore, to assign a valid signature, API Management uses the private key associated with the `mail.windowsazure.com` domain.
 
-## Next steps
+## Related content
 
 * [Overview of the developer portal](api-management-howto-developer-portal.md).
 * [How to create and use groups to manage developer accounts](api-management-howto-create-groups.md)

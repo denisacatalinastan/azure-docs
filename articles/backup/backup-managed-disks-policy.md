@@ -2,10 +2,11 @@
 title: Audit and enforce backup for Managed Disks using Azure Policy 
 description: 'An article describing how to use Azure Policy to audit and enforce backup for all Disks created in a given scope'
 ms.topic: how-to
-ms.date: 08/26/2024
+ms.date: 12/03/2024
 ms.service: azure-backup
 author: AbhishekMallick-MS
-ms.author: v-abhmallick
+ms.author: v-mallicka
+# Customer intent: As a Backup Admin, I want to configure Azure Policies to enforce backup for Managed Disks, so that I can ensure compliance and protect business-critical data across my organization's resources.
 ---
 
 # Audit and enforce backup for Managed Disks using Azure Policy 
@@ -73,7 +74,7 @@ To assign Policy 2, follow these steps:
 
 > [!NOTE]
 >
-> - Use [remediation](../governance/policy/how-to/remediate-resources.md) to enable policy of exisiting Managed Disks.
+> - Use [remediation](../governance/policy/how-to/remediate-resources.md) to enable policy of existing Managed Disks.
 > - It's recommended that this policy not be assigned to more than 200 Disks at a time. If the policy is assigned to more than 200 Disks, it can result in the backup being triggered a few hours later than that specified by the schedule.
 
 ## Next step

@@ -6,6 +6,7 @@ ms.suite: integration
 ms.reviewer: deli, estfan, azla
 ms.topic: how-to
 ms.date: 01/10/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Block connector usage in Azure Logic Apps
@@ -82,7 +83,7 @@ To block creating a connection altogether in a logic app workflow, follow these 
 
 1. In the [Azure portal](https://portal.azure.com) search box, enter **policy**, and select **Policy**.
 
-   ![Screenshot showing main Azure portal search box with "policy" entered and "Policy* selected.](./media/block-connections-connectors/find-select-azure-policy.png)
+   ![Screenshot showing main Azure portal search box with "policy" entered and "Policy" selected.](./media/block-connections-connectors/find-select-azure-policy.png)
 
 1. On the **Policy** menu, under **Authoring**, select **Definitions**. On the **Definitions** pane toolbar, select **Policy definition**.
 
@@ -337,7 +338,7 @@ The message includes this information:
 | Reason for the failure | `"Resource 'instagram' was disallowed by policy."` |
 | Assignment name | `"Block Instagram connections"` |
 | Assignment ID | `"/subscriptions/xxxxxXXXXXxxxxxXXXXXxxxxxXXXXX/resourceGroups/MyLogicApp-RG/providers/Microsoft.Authorization/policyAssignments/4231890fc3bd4352acb0b673"` |
-| Policy definition ID | `"/subscriptions/xxxxxXXXXXxxxxxXXXXXxxxxxXXXXX/providers/Microsoft.Authorization/policyDefinitions/b5ddcfec-1b24-4cac-a353-360846a59f24"` |
+| Policy definition ID | `"/subscriptions/xxxxxXXXXXxxxxxXXXXXxxxxxXXXXX/providers/Microsoft.Authorization/policyDefinitions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"` |
 |||
 
 ## Next steps

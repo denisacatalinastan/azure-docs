@@ -1,13 +1,16 @@
 ---
  title: include file
  description: include file
- author: timlt
- ms.service: iot-develop
+ author: dominicbetts
+ ms.service: azure-iot
  ms.topic: include
- ms.date: 09/17/2021
- ms.author: timlt
- ms.custom: include file, devx-track-azurecli
+ ms.date: 1/10/2025
+ ms.author: dobett
  ms.devlang: azurecli
+ ms.custom:
+   - include file
+   - devx-track-azurecli
+   - sfi-ropc-nochange
 ---
 
 [![Browse code](../articles/iot/media/common/browse-code.svg)](https://github.com/Azure/azure-iot-sdk-node/tree/main/device/samples)

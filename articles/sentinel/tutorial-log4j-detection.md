@@ -1,11 +1,10 @@
 ---
 title: Tutorial - Detect threats by using analytics rules in Microsoft Sentinel
 description: In this tutorial, learn how to use analytics rules in Microsoft Sentinel to detect exploits of the Apache Log4j vulnerability in any of your susceptible systems. Take advantage of the alert enrichment capabilities to surface as much information as possible for your investigation.
-author: yelevin
-ms.author: yelevin
+author: guywi-ms
+ms.author: guywild
 ms.topic: tutorial
 ms.date: 06/21/2023
-
 
 #Customer intent: As a security analyst, I want to create and customize analytics rules to detect and respond to security threats, so that I can protect my organization from vulnerabilities like the Apache Log4j exploit.
 
@@ -101,6 +100,8 @@ To complete this tutorial, make sure you have:
     To see more of the query text at one time, select the diagonal double-arrow icon at the upper right corner of the query window to expand the window to a larger size.
 
    :::image type="content" source="media/tutorial-log4j-detection/set-rule-logic-tab.png" alt-text="Screenshot of the Set rule logic tab of the Analytics rule wizard." lightbox="media/tutorial-log4j-detection/set-rule-logic-tab.png":::
+
+    [!INCLUDE [kusto-reference-general-no-alert](includes/kusto-reference-general-no-alert.md)]
 
 ## Enrich alerts with entities and other details
 
@@ -218,4 +219,5 @@ Now that you've learned how to search for exploits of a common vulnerability usi
     - [Alert properties](customize-alert-details.md)
 
 - Learn about [other kinds of analytics rules](detect-threats-built-in.md) in Microsoft Sentinel and their function.
-- Learn more about writing queries in Kusto Query Language (KQL). Learn more about KQL [concepts](/azure/data-explorer/kusto/concepts/) and [queries](/azure/data-explorer/kusto/query/), and see this handy [quick reference guide](/azure/data-explorer/kql-quick-reference).
+- Learn more about writing queries in Kusto Query Language (KQL). To learn more about KQL, see this [overview](/kusto/query/?view=microsoft-sentinel&preserve-view=true), learn some [best practices](/kusto/query/best-practices?view=microsoft-sentinel&preserve-view=true&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json), and keep this handy [quick reference guide](/kusto/query/kql-quick-reference?view=microsoft-sentinel&preserve-view=true).
+
