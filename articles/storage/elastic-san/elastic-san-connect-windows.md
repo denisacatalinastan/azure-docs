@@ -33,9 +33,10 @@ You can now connect Elastic SAN volumes to your Windows virtual machines automat
 ### How to Use the VM Extension
 #### During VM Creation
 
-1. In the Azure portal, navigate to the Extensions tab during VM setup.
-2. Select the Elastic SAN VM extension from the Marketplace.
-3. Provide the required configuration parameters:Elastic SAN name
+1. In the Azure portal, navigate to the **Extensions tab** during VM setup.
+2. Select the **Elastic SAN VM extension** from the Marketplace.
+3. Provide the required configuration parameters:
+ - Elastic SAN name
 - Volume group name
 - Number of sessions
 - Connection mode (e.g., read/write)
