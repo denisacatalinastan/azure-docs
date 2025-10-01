@@ -4,7 +4,7 @@ description: Learn how to connect to an Azure Elastic SAN volume by using the Wi
 author: roygara
 ms.service: azure-elastic-san-storage
 ms.topic: how-to
-ms.date: 09/30/2025
+ms.date: 10/1/2025
 ms.author: rogarana
 ms.custom: references_regions
 ---
